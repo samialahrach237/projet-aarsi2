@@ -1,0 +1,161 @@
+/* src/Styles/SearchBar.css */
+
+.modern-search-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.modern-search-bar {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  border: none;
+  margin: 0 auto;
+  padding: 12px 20px;
+  gap: 15px;
+}
+
+.search-fields-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.search-field-group {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 25px;
+  padding: 0;
+  flex: 1;
+  position: relative;
+  border: 1px solid black;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.search-field-group:focus-within {
+  border-color: #c5a059;
+  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+}
+
+.field-icon {
+  display: none;
+}
+
+.modern-search-select {
+  flex: 1;
+  padding: 0 18px;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+  letter-spacing: -0.02em;
+  color: black;
+  background: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image.svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23000'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  background-size: 11px;
+  border-radius: 22px;
+  height: 41px;
+  margin: 2px;
+}
+
+.modern-search-select:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 2px #c5a059;
+}
+
+.search-field-separator {
+  display: none;
+}
+
+.search-submit-button {
+  background: white;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  height: 45px;
+}
+
+.search-submit-button:hover {
+  background: #b08830;
+  border-color: black;
+}
+
+.search-icon {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .modern-search-bar {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .search-fields-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modern-search-select {
+    font-size: 0.8rem;
+    letter-spacing: -0.03em;
+    padding: 0 15px;
+    height: 38px;
+    background-position: right 15px center;
+  }
+
+  .search-field-group {
+    width: 100%;
+  }
+
+  .search-field-separator {
+    display: none;
+  }
+
+  .search-submit-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .modern-search-select {
+    font-size: 0.75rem;
+    letter-spacing: -0.04em;
+    padding: 0 12px;
+    height: 36px;
+    background-position: right 12px center;
+    background-size: 10px;
+  }
+
+  .search-submit-button {
+    height: 36px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

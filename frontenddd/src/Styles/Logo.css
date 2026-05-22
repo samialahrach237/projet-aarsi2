@@ -1,0 +1,128 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(197, 162, 83, 0.15);
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  box-shadow: 0 4px 12px rgba(197, 162, 83, 0.25);
+  transform: translateY(-2px);
+}
+
+.a-icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-shape {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-shape::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #C5A253;
+  border-radius: 50%;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #C5A253, #d4b36d);
+}
+
+.a-inner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #C5A253;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -5px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.logo-text {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0F6B4D;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.logo-text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C5A253, transparent);
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-container {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+  
+  .a-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .a-shape {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .a-shape::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .a-inner {
+    width: 7px;
+    height: 7px;
+    margin: -3.5px 0 0 -3.5px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    padding: 4px 8px;
+    gap: 6px;
+  }
+  
+  .a-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .logo-text {
+    font-size: 16px;
+  }
+}
